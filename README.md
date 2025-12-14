@@ -146,7 +146,8 @@ flowchart TD
     O --> UI
 ```
 
-# 6. End-to-End Data Validation Pipeline 
+# 6. End-to-End Data Validation Pipeline (Improved & More Realistic)
+
 ```mermaid
 flowchart LR
     A[Input: Provider CSV + PDFs] --> B[Ingestion Layer]
@@ -186,7 +187,7 @@ flowchart LR
     J3 --> Z[Output: Updated Directory + Dashboard]
 ```
 
----
+
 
 # 7. External Data Sources
 
