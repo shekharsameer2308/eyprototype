@@ -146,33 +146,33 @@ flowchart TD
     O --> UI
 ```
 
-# 6. End-to-End Data Validation Pipeline (Improved & More Realistic)
+# Data Pipeline 
 
 ```mermaid
 flowchart LR
-    A[Input: Provider CSV + PDFs] --> B[Ingestion Layer]
+    A[Input Providers CSV and PDFs] --> B[Ingestion Layer]
 
-    B --> C{PDF Type?}
-    C -- Digital --> D1[pdfplumber Extraction]
-    C -- Scanned --> D2[OCR via Tesseract]
+    B --> C{PDF Type}
+    C -- Digital --> D1[PDF Text Extraction]
+    C -- Scanned --> D2[OCR Using Tesseract]
 
-    D1 --> E[Normalize + Parse Provider Data]
+    D1 --> E[Normalize and Parse Provider Data]
     D2 --> E
 
     %% VALIDATION
     E --> F1[NPI Registry Validation]
     E --> F2[Website Scraping]
-    E --> F3[Address/Phone Verification]
+    E --> F3[Address and Phone Verification]
     E --> F4[License Lookup]
 
-    F1 --> G[Cross-Validation Engine]
+    F1 --> G[Cross Validation Engine]
     F2 --> G
     F3 --> G
     F4 --> G
 
     %% ENRICHMENT
-    G --> H1[Specialty/Education Enrichment]
-    H1 --> H2[Identify Conflicts or Missing Info]
+    G --> H1[Specialty and Education Enrichment]
+    H1 --> H2[Detect Missing or Conflicting Info]
 
     %% QA
     H2 --> I1[Confidence Score Generation]
@@ -180,16 +180,16 @@ flowchart LR
     I2 --> I3[Manual Review Queue]
 
     %% DIRECTORY GENERATION
-    I3 --> J1[Cleaned Directory Entry Builder]
-    J1 --> J2[Summary + Exception Reports]
+    I3 --> J1[Clean Directory Entry Builder]
+    J1 --> J2[Summary and Exception Reports]
     J2 --> J3[Provider Notification Templates]
 
-    J3 --> Z[Output: Updated Directory + Dashboard]
+    J3 --> Z[Output Updated Directory and Dashboard]
 ```
 
 
 
-# 7. External Data Sources
+# 6. External Data Sources
 
 | Data Source                         | Usage                                   |
 |------------------------------------|-------------------------------------------|
@@ -202,7 +202,7 @@ flowchart LR
 
 ---
 
-# 8. Output Deliverables
+# 7. Output Deliverables
 
 ### **System produces:**
 
@@ -218,7 +218,7 @@ with **70–90% reduction in manual effort**.
 
 ---
 
-# 9. Key System Capabilities
+# 8. Key System Capabilities
 
 - OCR + text extraction  
 - Multi-source web scraping  
@@ -231,7 +231,7 @@ with **70–90% reduction in manual effort**.
 
 ---
 
-# 10. Conclusion
+# 9. Conclusion
 
 This Agentic AI Architecture provides a scalable, modular, and production-ready blueprint for solving the high-impact challenge of maintaining accurate healthcare provider directories.  
 It reduces compliance risk, operational workload, and member dissatisfaction while enabling rapid data validation and enrichment.
